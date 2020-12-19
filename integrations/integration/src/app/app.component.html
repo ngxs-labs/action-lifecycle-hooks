@@ -1,0 +1,13 @@
+<h1>
+  @ngxs-labs/action-lifecylce-hooks
+</h1>
+
+<p>
+  Open browser console check log of action hooks executed
+</p>
+
+<pre>{{testState$ | async | json}}</pre>
+
+<button (click)="dispatchPromiseAction()">Dispatch Async Promise Action</button>
+<br><br>
+<button (click)="dispatchPromiseActionWithoutHooks()">Dispatch Async Promise Action Without Hooks Attached</button>

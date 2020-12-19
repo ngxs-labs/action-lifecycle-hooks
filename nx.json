@@ -22,9 +22,20 @@
       }
     }
   },
-  "projects": {},
+  "projects": {
+    "action-lifecycle-hooks": {
+      "tags": []
+    },
+    "integration": {
+      "tags": []
+    },
+    "integration-e2e": {
+      "tags": [],
+      "implicitDependencies": ["integration"]
+    }
+  },
   "workspaceLayout": {
-    "appsDir": "packages",
+    "appsDir": "integrations",
     "libsDir": "packages"
   }
 }

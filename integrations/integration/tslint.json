@@ -1,0 +1,20 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "actionLifecycleHooks",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "action-lifecycle-hooks",
+      "kebab-case"
+    ]
+  },
+  "linterOptions": {
+    "exclude": ["!**/*"]
+  }
+}

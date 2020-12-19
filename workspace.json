@@ -1,8 +1,181 @@
 {
   "version": 2,
-
-  "projects": {},
+  "projects": {
+    "action-lifecycle-hooks": {
+      "projectType": "library",
+      "root": "packages/action-lifecycle-hooks",
+      "sourceRoot": "packages/action-lifecycle-hooks/src",
+      "prefix": "action-lifecycle-hooks",
+      "targets": {
+        "lint": {
+          "executor": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "packages/action-lifecycle-hooks/tsconfig.lib.json",
+              "packages/action-lifecycle-hooks/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!packages/action-lifecycle-hooks/**/*"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/packages/action-lifecycle-hooks"
+          ],
+          "options": {
+            "jestConfig": "packages/action-lifecycle-hooks/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "integration": {
+      "projectType": "application",
+      "root": "integrations/integration",
+      "sourceRoot": "integrations/integration/src",
+      "prefix": "action-lifecycle-hooks",
+      "targets": {
+        "build": {
+          "executor": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/integrations/integration",
+            "index": "integrations/integration/src/index.html",
+            "main": "integrations/integration/src/main.ts",
+            "polyfills": "integrations/integration/src/polyfills.ts",
+            "tsConfig": "integrations/integration/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "integrations/integration/src/favicon.ico",
+              "integrations/integration/src/assets"
+            ],
+            "styles": [
+              "integrations/integration/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "integrations/integration/src/environments/environment.ts",
+                  "with": "integrations/integration/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "integration:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "integration:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "executor": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "integration:build"
+          }
+        },
+        "lint": {
+          "executor": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "integrations/integration/tsconfig.app.json",
+              "integrations/integration/tsconfig.spec.json",
+              "integrations/integration/tsconfig.editor.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!integrations/integration/**/*"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/integrations/integration"
+          ],
+          "options": {
+            "jestConfig": "integrations/integration/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "integration-e2e": {
+      "root": "integrations/integration-e2e",
+      "sourceRoot": "integrations/integration-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "integrations/integration-e2e/cypress.json",
+            "tsConfig": "integrations/integration-e2e/tsconfig.e2e.json",
+            "devServerTarget": "integration:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "integration:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "integrations/integration-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!integrations/integration-e2e/**/*"
+            ]
+          }
+        }
+      }
+    }
+  },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
-  }
+    "defaultCollection": "@nrwl/angular"
+  },
+  "generators": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
+    }
+  },
+  "defaultProject": "integration"
 }
