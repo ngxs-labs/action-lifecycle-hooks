@@ -7,6 +7,18 @@
       "sourceRoot": "packages/action-lifecycle-hooks/src",
       "prefix": "action-lifecycle-hooks",
       "targets": {
+        "build": {
+          "executor": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "packages/action-lifecycle-hooks/tsconfig.lib.json",
+            "project": "packages/action-lifecycle-hooks/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "packages/action-lifecycle-hooks/tsconfig.lib.prod.json"
+            }
+          }
+        },
         "lint": {
           "executor": "@angular-devkit/build-angular:tslint",
           "options": {
