@@ -28,7 +28,7 @@ export class TestState {
     ctx.patchState({ test: 'executing promiseAction', error: '' });
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        if (Math.random() > 0.5) resolve();
+        if (Math.random() > 0.5) resolve('');
         else reject('error');
       }, 1000);
     });
