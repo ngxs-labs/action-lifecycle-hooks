@@ -8,7 +8,7 @@
       "prefix": "action-lifecycle-hooks",
       "targets": {
         "build": {
-          "executor": "@nrwl/angular:ng-packagr-lite",
+          "executor": "@nrwl/angular:package",
           "options": {
             "tsConfig": "packages/action-lifecycle-hooks/tsconfig.lib.json",
             "project": "packages/action-lifecycle-hooks/ng-package.json"

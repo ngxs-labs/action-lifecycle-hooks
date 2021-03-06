@@ -1,0 +1,14 @@
+{
+  "packageFiles": [
+    {
+      "filename": "packages/action-lifecycle-hooks/package.json",
+      "type": "json"
+    }
+  ],
+  "bumpFiles": [
+    {
+      "filename": "packages/action-lifecycle-hooks/package.json",
+      "type": "json"
+    }
+  ]
+}
