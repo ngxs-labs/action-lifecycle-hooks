@@ -1,8 +1,11 @@
 {
   "name": "@ngxs-labs/action-lifecycle-hooks",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "peerDependencies": {
-    "@ngxs/store": ">=3.4.0 <4.0.0"
+    "@ngxs/store": ">=3.4.0 <4.0.0",
+    "@angular/core": ">=8.0.0",
+    "@angular/common": ">=8.0.0",
+    "rxjs": ">=6.0.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"
