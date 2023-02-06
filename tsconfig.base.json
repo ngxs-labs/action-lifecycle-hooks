@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@ngxs-labs/action-lifecycle-hooks": [
-        "packages/action-lifecycle-hooks/src/index.ts"
+        "libs/action-lifecycle-hooks/src/index.ts"
       ]
     }
   },
