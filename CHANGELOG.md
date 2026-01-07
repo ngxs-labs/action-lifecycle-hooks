@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [19.0.3](https://github.com/ngxs-labs/action-lifecycle-hooks/compare/v19.0.2...v19.0.3) (2026-01-07)
+
 ### [19.0.2](https://github.com/ngxs-labs/action-lifecycle-hooks/compare/v19.0.1...v19.0.2) (2026-01-07)
 
 ### [19.0.1](https://github.com/ngxs-labs/action-lifecycle-hooks/compare/v19.0.0...v19.0.1) (2026-01-07)
