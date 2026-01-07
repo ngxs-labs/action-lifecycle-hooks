@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { State, Action, StateContext } from '@ngxs/store';
+import { State, Action, StateContext, StateToken } from '@ngxs/store';
 import {
   ActionCancelled,
   ActionErrored,
@@ -12,8 +12,10 @@ export interface TestStateModel {
   error: string;
 }
 
-@State<TestStateModel>({
-  name: 'test',
+export const TODOS_STATE_TOKEN = new StateToken<TestStateModel>('test');
+
+@State({
+  name: TODOS_STATE_TOKEN,
   defaults: {
     error: '',
     test: '',

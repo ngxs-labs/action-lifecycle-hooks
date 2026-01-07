@@ -1,9 +1,9 @@
 {
   "scripts": {
     "nx": "nx",
-    "start": "nx serve",
+    "start": "nx serve integration",
     "build": "nx build action-lifecycle-hooks --configuration=production",
-    "test": "nx test",
+    "test": "nx test integration",
     "lint": "nx workspace-lint && nx lint",
     "e2e": "nx e2e",
     "affected:apps": "nx affected:apps",
@@ -32,8 +32,8 @@
     "@angular/platform-browser": "18.2.9",
     "@angular/platform-browser-dynamic": "18.2.9",
     "@angular/router": "18.2.9",
-    "@ngxs/logger-plugin": "^3.8.0",
-    "@ngxs/store": "^3.8.0",
+    "@ngxs/logger-plugin": "^18.0.0",
+    "@ngxs/store": "^18.0.0",
     "@nx/angular": "19.8.9",
     "rxjs": "7.8.2",
     "tslib": "^2.3.0",

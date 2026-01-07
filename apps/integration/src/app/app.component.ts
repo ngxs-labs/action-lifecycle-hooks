@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngxs/store';
-import { PromiseAction, PromiseActionWithoutHooks } from './states/test.actions';
-import { TestState } from './states/test.state';
+import {
+  PromiseAction,
+  PromiseActionWithoutHooks,
+} from './states/test.actions';
+import { TODOS_STATE_TOKEN } from './states/test.state';
 
 @Component({
   selector: 'action-lifecycle-hooks-root',
@@ -9,7 +12,7 @@ import { TestState } from './states/test.state';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  testState$ = this.store.select(TestState);
+  testState$ = this.store.select(TODOS_STATE_TOKEN);
 
   constructor(private store: Store) {}
 
