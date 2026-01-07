@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.6](https://github.com/ngxs-labs/action-lifecycle-hooks/compare/v1.0.5...v1.0.6) (2026-01-07)
+
+
+### Bug Fixes
+
+* version config ([77b7021](https://github.com/ngxs-labs/action-lifecycle-hooks/commit/77b7021a2efa2c4f939ded250b34b26466bea6d8))
+
 ### [1.0.5](https://github.com/ngxs-labs/action-lifecycle-hooks/compare/v1.0.4...v1.0.5) (2023-04-20)
 
 ### [1.0.1](https://github.com/ngxs-labs/action-lifecycle-hooks/compare/v1.0.4...v1.0.1) (2023-04-20)
