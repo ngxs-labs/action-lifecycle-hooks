@@ -7,9 +7,10 @@ import {
 import { TODOS_STATE_TOKEN } from './states/test.state';
 
 @Component({
-  selector: 'action-lifecycle-hooks-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+    selector: 'action-lifecycle-hooks-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 export class AppComponent {
   testState$ = this.store.select(TODOS_STATE_TOKEN);
