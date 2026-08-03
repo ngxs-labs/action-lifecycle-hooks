@@ -1,6 +1,6 @@
 {
   "name": "@ngxs-labs/action-lifecycle-hooks",
-  "version": "20.0.0",
+  "version": "21.0.0",
   "peerDependencies": {
     "@ngxs/store": ">=19.0.0 <22.0.0",
     "@angular/core": ">=19.0.0 <22.0.0",
